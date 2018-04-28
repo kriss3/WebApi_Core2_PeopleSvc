@@ -15,6 +15,7 @@ namespace People.API
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.AddMvc();
         }
 
@@ -32,6 +33,7 @@ namespace People.API
             }
 
             app.UseStatusCodePages();
+            app.UseCors(builder => builder.AllowAnyOrigin());
             app.UseMvc();
 
             app.Run(async (context) =>

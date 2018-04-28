@@ -17,7 +17,7 @@ namespace People.API.Controllers
             return Ok(PeopleStore.CurrentStore.People);
         }
 
-        [HttpGet("{id}", Name ="GetPerson")]
+        [HttpGet("{id}", Name = "GetPerson")]
         public IActionResult GetPerson(int id)
         {
             //find person;
@@ -55,7 +55,7 @@ namespace People.API.Controllers
             };
 
             PeopleStore.CurrentStore.People.Add(finalPerson);
-            return CreatedAtRoute("GetPerson", new { id = finalPerson.Id}, finalPerson);
+            return CreatedAtRoute("GetPerson", new { id = finalPerson.Id }, finalPerson);
         }
 
         [HttpPut("{id}")]
@@ -80,6 +80,16 @@ namespace People.API.Controllers
             foundPerson.Address = updatedPerson.Address;
 
             return NoContent(); //204 => can also return 200OK and pass updated resource;
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeletePerson(int id)
+        {
+            var foundPerson = PeopleStore.CurrentStore.People.FirstOrDefault(p => p.Id == id);
+            if (foundPerson == null)
+                return NotFound();
+            PeopleStore.CurrentStore.People.Remove(foundPerson);
+            return NoContent();
         }
     }
 }
