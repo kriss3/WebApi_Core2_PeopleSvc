@@ -1,0 +1,135 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DirectFocus-People",
+		"_postman_id": "56bd07ec-3216-9573-0cfe-ecbf5244ab23",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetPeople - localHost",
+			"request": {
+				"url": "http://localhost:4200/api/people",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetPeople - published",
+			"request": {
+				"url": "http://peoplecollectionapi.azurewebsites.net/api/people",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetPerson by Id - localHost",
+			"request": {
+				"url": "http://localhost:4200/api/people/0",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetPerson by Id - published",
+			"request": {
+				"url": "http://peoplecollectionapi.azurewebsites.net/api/people/0",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Person - localHost",
+			"request": {
+				"url": "http://localhost:4200/api/people/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"FirstName\":\"Stefan\",\n\t\"LastName\": \"Mazurkiewicz\",\n\t\"Age\": 57,\n\t\"Address\": \"123 Main Street, BC, V6Y1P1, Canada\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Person - published",
+			"request": {
+				"url": "http://peoplecollectionapi.azurewebsites.net/api/people",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"FirstName\":\"Stefan\",\n\t\"LastName\": \"Mazurkiewicz\",\n\t\"Age\": 57,\n\t\"Address\": \"123 Main Street, BC, V6Y1P1, Canada\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Last Person - localHost",
+			"request": {
+				"url": "http://localhost:4200/api/people/10",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"FirstName\":\"Stefan\",\n\t\"LastName\": \"Mazurkiewicz\",\n\t\"Age\": 61,\n\t\"Address\": \"123 Main Street, BC, V6Y1P1, Canada\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Last Person - published",
+			"request": {
+				"url": "http://peoplecollectionapi.azurewebsites.net/api/people/10",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"FirstName\":\"Stefan\",\n\t\"LastName\": \"Mazurkiewicz\",\n\t\"Age\": 61,\n\t\"Address\": \"123 Main Street, BC, V6Y1P1, Canada\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
