@@ -32,7 +32,7 @@
 		{
 			"name": "GetPerson by Id - localHost",
 			"request": {
-				"url": "http://localhost:4200/api/people/0",
+				"url": "http://localhost:4200/api/people/10",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -43,7 +43,7 @@
 		{
 			"name": "GetPerson by Id - published",
 			"request": {
-				"url": "http://peoplecollectionapi.azurewebsites.net/api/people/0",
+				"url": "http://peoplecollectionapi.azurewebsites.net/api/people/10",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -116,6 +116,26 @@
 			"request": {
 				"url": "http://peoplecollectionapi.azurewebsites.net/api/people/10",
 				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"FirstName\":\"Stefan\",\n\t\"LastName\": \"Mazurkiewicz\",\n\t\"Age\": 61,\n\t\"Address\": \"123 Main Street, BC, V6Y1P1, Canada\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Last Person - published",
+			"request": {
+				"url": "http://peoplecollectionapi.azurewebsites.net/api/people/10",
+				"method": "DELETE",
 				"header": [
 					{
 						"key": "Content-Type",
