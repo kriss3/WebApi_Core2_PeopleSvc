@@ -38,12 +38,12 @@ namespace People.API
 
             app.Run(async (context) =>
             {
-                var message = introduction();
+                var message = Introduction();
                 context.Response.ContentType = "text/html";
                 await context.Response.WriteAsync(message);
             });
         }
-        private string introduction()
+        private string Introduction()
         {
             return @" 
             <title>Krzysztof Szczurowski - Test WebApi 2.0</title>
